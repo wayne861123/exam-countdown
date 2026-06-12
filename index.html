@@ -79,6 +79,16 @@
 
     .input-group { margin-bottom: 24px; }
 
+    .input-wrap {
+      position: relative;
+      width: 100%;
+    }
+
+    .input-wrap input[type="date"] {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
     label {
       display: block;
       margin-bottom: 8px;
@@ -251,7 +261,9 @@
 
       <div class="input-group">
         <label for="birthdate-csat">出生日期</label>
-        <input type="date" id="birthdate-csat">
+        <div class="input-wrap">
+          <input type="date" id="birthdate-csat">
+        </div>
       </div>
 
       <button class="btn btn-primary" onclick="calculate('csat')">開始倒數</button>
@@ -304,7 +316,9 @@
 
       <div class="input-group">
         <label for="birthdate-tve">出生日期</label>
-        <input type="date" id="birthdate-tve">
+        <div class="input-wrap">
+          <input type="date" id="birthdate-tve">
+        </div>
       </div>
 
       <button class="btn btn-primary" onclick="calculate('tve')">開始倒數</button>
