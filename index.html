@@ -77,16 +77,29 @@
       margin-bottom: 30px;
     }
 
-    .input-group { margin-bottom: 24px; }
+    .input-group { margin-bottom: 24px; text-align: center; }
+
+
+    .input-group label { text-align: left; }
 
     .input-wrap {
       position: relative;
       width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
     }
 
     .input-wrap input[type="date"] {
       width: 100%;
       box-sizing: border-box;
+    }
+
+    .input-error {
+      color: #ff6b6b;
+      font-size: 0.85em;
+      margin-top: 6px;
+      min-height: 1.2em;
+      text-align: center;
     }
 
     label {
@@ -264,6 +277,7 @@
         <div class="input-wrap">
           <input type="date" id="birthdate-csat">
         </div>
+        <div class="input-error" id="error-csat"></div>
       </div>
 
       <button class="btn btn-primary" onclick="calculate('csat')">開始倒數</button>
@@ -319,6 +333,7 @@
         <div class="input-wrap">
           <input type="date" id="birthdate-tve">
         </div>
+        <div class="input-error" id="error-tve"></div>
       </div>
 
       <button class="btn btn-primary" onclick="calculate('tve')">開始倒數</button>
