@@ -441,7 +441,7 @@
 
     function calculate(type) {
       const birthVal = document.getElementById(`birthdate-${type}`).value;
-      if (!birthVal) { alert('請輸入出生日期'); return; }
+      if (!birthVal) { document.getElementById(`error-${type}`).textContent = '請輸入出生日期'; return; }
 
       if (countdownIntervals[type]) clearInterval(countdownIntervals[type]);
 
@@ -449,7 +449,7 @@
       // which shifts the year backward by one for users in negative-UTC timezones).
       const parts = birthVal.split('-').map(Number);
       const birth = new Date(parts[0], parts[1] - 1, parts[2]);
-      if (isNaN(birth.getTime())) { alert('請輸入有效的出生日期'); return; }
+      if (isNaN(birth.getTime())) { document.getElementById(`error-${type}`).textContent = '請輸入有效的出生日期'; return; }
       const now = new Date();
 
       // Taiwan's school-year cutoff is Sept 1. Students born Sept–Dec start
