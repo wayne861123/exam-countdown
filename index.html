@@ -155,23 +155,20 @@
 
     .countdown-section {
       display: grid;
-      grid-template-columns: 100px repeat(3, 70px);
+      grid-template-columns: repeat(4, 1fr);
       gap: 12px;
       margin-top: 20px;
       justify-content: center;
     }
 
+
     .countdown-item {
       background: #0f0f1a;
       border-radius: 12px;
       padding: 16px 8px;
-      min-width: 70px;
+      min-width: 0;
       white-space: nowrap;
       text-align: center;
-    }
-
-    .countdown-item:first-child {
-      min-width: 100px;
     }
 
     .countdown-value {
